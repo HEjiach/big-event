@@ -1,0 +1,25 @@
+//package com.itheima.bigevent;
+//
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//public class ThreadLocalTest {
+//    @Test
+//    public void ThreadLocal() {
+//        ThreadLocal threadLocal = new ThreadLocal();
+//        new Thread(() -> {
+//            threadLocal.set("消炎");
+//            System.out.println(Thread.currentThread().getName() + threadLocal.get());
+//            System.out.println(Thread.currentThread().getName() + threadLocal.get());
+//            System.out.println(Thread.currentThread().getName() + threadLocal.get());
+//        }, "蓝色").start();
+//
+//        new Thread(() -> {
+//            threadLocal.set("盐城");
+//            System.out.println(Thread.currentThread().getName() + threadLocal.get());
+//            System.out.println(Thread.currentThread().getName() + threadLocal.get());
+//            System.out.println(Thread.currentThread().getName() + threadLocal.get());
+//        }, "绿色").start();
+//    }
+//}

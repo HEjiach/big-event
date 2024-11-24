@@ -1,0 +1,46 @@
+//package com.itheima.bigevent;
+//
+//import com.auth0.jwt.JWT;
+//import com.auth0.jwt.JWTVerifier;
+//import com.auth0.jwt.algorithms.Algorithm;
+//import com.auth0.jwt.interfaces.Claim;
+//import com.auth0.jwt.interfaces.DecodedJWT;
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//import org.springframework.util.DigestUtils;
+//
+//import java.util.Date;
+//import java.util.HashMap;
+//import java.util.Map;
+//
+//@SpringBootTest
+//public class jwtTest {
+//    private static final String KEY="itheima";
+//    @Test
+//    public void jwt(){
+//        Map<String ,Object> claims=new HashMap<>();
+//
+//        claims.put("id",1);
+//        claims.put("username","zhangsan");
+//     String token= JWT.create().withClaim("user","claims")//添加载荷
+//                .withExpiresAt(new Date(System.currentTimeMillis()+1000*60*60*12))
+//                .sign(Algorithm.HMAC256(KEY));
+//        System.out.println(token);
+//    }
+//    @Test
+//    void parseToken(){
+//        String token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9." +
+//                "eyJ1c2VyIjoiY2xhaW1zIiwiZXhwIjoxNzMxMjY3Mzg2fQ." +
+//                "x5l0EURuahAkrbAEYyRDxMpInluyMNalyGVZZNSZ8NA";
+//        JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256(KEY)).build();
+//        DecodedJWT decodedJWT = jwtVerifier.verify(token);
+//        Map<String ,Claim> claims = decodedJWT.getClaims();
+//        System.out.println(claims.get("user"));
+//    }
+//    @Test
+//    //e10adc3949ba59abbe56e057f20f883e
+//    void Dig(){
+//        String s = DigestUtils.md5DigestAsHex("234567".getBytes());
+//        System.out.println(s);
+//    }
+//}
